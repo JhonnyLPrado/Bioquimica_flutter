@@ -1,0 +1,1347 @@
+import '../models/elemento_quimico.dart';
+
+class TablaPeriodicaExt {
+  static const elementos = <ElementoQuimico>[
+    // 1-18
+    // ---------------------------------------------------------------------------
+    // BLOQUE 1 — Elementos 1 al 25
+    // ---------------------------------------------------------------------------
+    ElementoQuimico(
+      numeroAtomico: 1,
+      simbolo: "H",
+      nombre: "Hidrógeno",
+      masaAtomica: 1.008,
+      grupo: 1,
+      periodo: 1,
+      categoria: "No metal",
+      colorHex: "#A3E4D7",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 2,
+      simbolo: "He",
+      nombre: "Helio",
+      masaAtomica: 4.0026,
+      grupo: 18,
+      periodo: 1,
+      categoria: "Gas noble",
+      colorHex: "#F9E79F",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 3,
+      simbolo: "Li",
+      nombre: "Litio",
+      masaAtomica: 6.94,
+      grupo: 1,
+      periodo: 2,
+      categoria: "Metal alcalino",
+      colorHex: "#AED6F1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 4,
+      simbolo: "Be",
+      nombre: "Berilio",
+      masaAtomica: 9.0122,
+      grupo: 2,
+      periodo: 2,
+      categoria: "Metal alcalinotérreo",
+      colorHex: "#A9CCE3",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 5,
+      simbolo: "B",
+      nombre: "Boro",
+      masaAtomica: 10.81,
+      grupo: 13,
+      periodo: 2,
+      categoria: "Metaloide",
+      colorHex: "#F5B7B1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 6,
+      simbolo: "C",
+      nombre: "Carbono",
+      masaAtomica: 12.011,
+      grupo: 14,
+      periodo: 2,
+      categoria: "No metal",
+      colorHex: "#D7DBDD",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 7,
+      simbolo: "N",
+      nombre: "Nitrógeno",
+      masaAtomica: 14.007,
+      grupo: 15,
+      periodo: 2,
+      categoria: "No metal",
+      colorHex: "#A9DFBF",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 8,
+      simbolo: "O",
+      nombre: "Oxígeno",
+      masaAtomica: 15.999,
+      grupo: 16,
+      periodo: 2,
+      categoria: "No metal",
+      colorHex: "#AED6F1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 9,
+      simbolo: "F",
+      nombre: "Flúor",
+      masaAtomica: 18.998,
+      grupo: 17,
+      periodo: 2,
+      categoria: "Halógeno",
+      colorHex: "#FADBD8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 10,
+      simbolo: "Ne",
+      nombre: "Neón",
+      masaAtomica: 20.180,
+      grupo: 18,
+      periodo: 2,
+      categoria: "Gas noble",
+      colorHex: "#F9E79F",
+    ),
+
+    // ------------------------------
+    // PERIODO 3
+    // ------------------------------
+    ElementoQuimico(
+      numeroAtomico: 11,
+      simbolo: "Na",
+      nombre: "Sodio",
+      masaAtomica: 22.990,
+      grupo: 1,
+      periodo: 3,
+      categoria: "Metal alcalino",
+      colorHex: "#AED6F1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 12,
+      simbolo: "Mg",
+      nombre: "Magnesio",
+      masaAtomica: 24.305,
+      grupo: 2,
+      periodo: 3,
+      categoria: "Metal alcalinotérreo",
+      colorHex: "#A9CCE3",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 13,
+      simbolo: "Al",
+      nombre: "Aluminio",
+      masaAtomica: 26.982,
+      grupo: 13,
+      periodo: 3,
+      categoria: "Metal",
+      colorHex: "#D6EAF8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 14,
+      simbolo: "Si",
+      nombre: "Silicio",
+      masaAtomica: 28.085,
+      grupo: 14,
+      periodo: 3,
+      categoria: "Metaloide",
+      colorHex: "#F5B7B1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 15,
+      simbolo: "P",
+      nombre: "Fósforo",
+      masaAtomica: 30.974,
+      grupo: 15,
+      periodo: 3,
+      categoria: "No metal",
+      colorHex: "#A9DFBF",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 16,
+      simbolo: "S",
+      nombre: "Azufre",
+      masaAtomica: 32.06,
+      grupo: 16,
+      periodo: 3,
+      categoria: "No metal",
+      colorHex: "#F7DC6F",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 17,
+      simbolo: "Cl",
+      nombre: "Cloro",
+      masaAtomica: 35.45,
+      grupo: 17,
+      periodo: 3,
+      categoria: "Halógeno",
+      colorHex: "#FADBD8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 18,
+      simbolo: "Ar",
+      nombre: "Argón",
+      masaAtomica: 39.948,
+      grupo: 18,
+      periodo: 3,
+      categoria: "Gas noble",
+      colorHex: "#F9E79F",
+    ),
+
+    // ------------------------------
+    // PERIODO 4 (1ra parte)
+    // ------------------------------
+    ElementoQuimico(
+      numeroAtomico: 19,
+      simbolo: "K",
+      nombre: "Potasio",
+      masaAtomica: 39.098,
+      grupo: 1,
+      periodo: 4,
+      categoria: "Metal alcalino",
+      colorHex: "#AED6F1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 20,
+      simbolo: "Ca",
+      nombre: "Calcio",
+      masaAtomica: 40.078,
+      grupo: 2,
+      periodo: 4,
+      categoria: "Metal alcalinotérreo",
+      colorHex: "#A9CCE3",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 21,
+      simbolo: "Sc",
+      nombre: "Escandio",
+      masaAtomica: 44.956,
+      grupo: 3,
+      periodo: 4,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 22,
+      simbolo: "Ti",
+      nombre: "Titanio",
+      masaAtomica: 47.867,
+      grupo: 4,
+      periodo: 4,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 23,
+      simbolo: "V",
+      nombre: "Vanadio",
+      masaAtomica: 50.942,
+      grupo: 5,
+      periodo: 4,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 24,
+      simbolo: "Cr",
+      nombre: "Cromo",
+      masaAtomica: 51.996,
+      grupo: 6,
+      periodo: 4,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 25,
+      simbolo: "Mn",
+      nombre: "Manganeso",
+      masaAtomica: 54.938,
+      grupo: 7,
+      periodo: 4,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    // ---------------------------------------------------------------------------
+    // BLOQUE 2 — Elementos 26 al 50
+    // ---------------------------------------------------------------------------
+
+    // Continuación del PERIODO 4
+    ElementoQuimico(
+      numeroAtomico: 26,
+      simbolo: "Fe",
+      nombre: "Hierro",
+      masaAtomica: 55.845,
+      grupo: 8,
+      periodo: 4,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 27,
+      simbolo: "Co",
+      nombre: "Cobalto",
+      masaAtomica: 58.933,
+      grupo: 9,
+      periodo: 4,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 28,
+      simbolo: "Ni",
+      nombre: "Níquel",
+      masaAtomica: 58.693,
+      grupo: 10,
+      periodo: 4,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 29,
+      simbolo: "Cu",
+      nombre: "Cobre",
+      masaAtomica: 63.546,
+      grupo: 11,
+      periodo: 4,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 30,
+      simbolo: "Zn",
+      nombre: "Zinc",
+      masaAtomica: 65.38,
+      grupo: 12,
+      periodo: 4,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 31,
+      simbolo: "Ga",
+      nombre: "Galio",
+      masaAtomica: 69.723,
+      grupo: 13,
+      periodo: 4,
+      categoria: "Metal",
+      colorHex: "#D6EAF8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 32,
+      simbolo: "Ge",
+      nombre: "Germanio",
+      masaAtomica: 72.630,
+      grupo: 14,
+      periodo: 4,
+      categoria: "Metaloide",
+      colorHex: "#F5B7B1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 33,
+      simbolo: "As",
+      nombre: "Arsénico",
+      masaAtomica: 74.922,
+      grupo: 15,
+      periodo: 4,
+      categoria: "Metaloide",
+      colorHex: "#F5B7B1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 34,
+      simbolo: "Se",
+      nombre: "Selenio",
+      masaAtomica: 78.971,
+      grupo: 16,
+      periodo: 4,
+      categoria: "No metal",
+      colorHex: "#A9DFBF",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 35,
+      simbolo: "Br",
+      nombre: "Bromo",
+      masaAtomica: 79.904,
+      grupo: 17,
+      periodo: 4,
+      categoria: "Halógeno",
+      colorHex: "#FADBD8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 36,
+      simbolo: "Kr",
+      nombre: "Kriptón",
+      masaAtomica: 83.798,
+      grupo: 18,
+      periodo: 4,
+      categoria: "Gas noble",
+      colorHex: "#F9E79F",
+    ),
+
+    // ---------------------------------------------------------------------------
+    // PERIODO 5
+    // ---------------------------------------------------------------------------
+    ElementoQuimico(
+      numeroAtomico: 37,
+      simbolo: "Rb",
+      nombre: "Rubidio",
+      masaAtomica: 85.468,
+      grupo: 1,
+      periodo: 5,
+      categoria: "Metal alcalino",
+      colorHex: "#AED6F1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 38,
+      simbolo: "Sr",
+      nombre: "Estroncio",
+      masaAtomica: 87.62,
+      grupo: 2,
+      periodo: 5,
+      categoria: "Metal alcalinotérreo",
+      colorHex: "#A9CCE3",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 39,
+      simbolo: "Y",
+      nombre: "Itrio",
+      masaAtomica: 88.906,
+      grupo: 3,
+      periodo: 5,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 40,
+      simbolo: "Zr",
+      nombre: "Zirconio",
+      masaAtomica: 91.224,
+      grupo: 4,
+      periodo: 5,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 41,
+      simbolo: "Nb",
+      nombre: "Niobio",
+      masaAtomica: 92.906,
+      grupo: 5,
+      periodo: 5,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 42,
+      simbolo: "Mo",
+      nombre: "Molibdeno",
+      masaAtomica: 95.95,
+      grupo: 6,
+      periodo: 5,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 43,
+      simbolo: "Tc",
+      nombre: "Tecnecio",
+      masaAtomica: 98.0,
+      grupo: 7,
+      periodo: 5,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 44,
+      simbolo: "Ru",
+      nombre: "Rutenio",
+      masaAtomica: 101.07,
+      grupo: 8,
+      periodo: 5,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 45,
+      simbolo: "Rh",
+      nombre: "Rodio",
+      masaAtomica: 102.91,
+      grupo: 9,
+      periodo: 5,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 46,
+      simbolo: "Pd",
+      nombre: "Paladio",
+      masaAtomica: 106.42,
+      grupo: 10,
+      periodo: 5,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 47,
+      simbolo: "Ag",
+      nombre: "Plata",
+      masaAtomica: 107.87,
+      grupo: 11,
+      periodo: 5,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 48,
+      simbolo: "Cd",
+      nombre: "Cadmio",
+      masaAtomica: 112.41,
+      grupo: 12,
+      periodo: 5,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 49,
+      simbolo: "In",
+      nombre: "Indio",
+      masaAtomica: 114.82,
+      grupo: 13,
+      periodo: 5,
+      categoria: "Metal",
+      colorHex: "#D6EAF8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 50,
+      simbolo: "Sn",
+      nombre: "Estaño",
+      masaAtomica: 118.71,
+      grupo: 14,
+      periodo: 5,
+      categoria: "Metal",
+      colorHex: "#D6EAF8",
+    ),
+
+    // ---------------------------------------------------------------------------
+    // BLOQUE 3 — Elementos 51 al 75
+    // ---------------------------------------------------------------------------
+
+    // PERIODO 5 (continuación)
+    ElementoQuimico(
+      numeroAtomico: 51,
+      simbolo: "Sb",
+      nombre: "Antimonio",
+      masaAtomica: 121.76,
+      grupo: 15,
+      periodo: 5,
+      categoria: "Metaloide",
+      colorHex: "#F5B7B1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 52,
+      simbolo: "Te",
+      nombre: "Telurio",
+      masaAtomica: 127.60,
+      grupo: 16,
+      periodo: 5,
+      categoria: "Metaloide",
+      colorHex: "#F5B7B1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 53,
+      simbolo: "I",
+      nombre: "Yodo",
+      masaAtomica: 126.90,
+      grupo: 17,
+      periodo: 5,
+      categoria: "Halógeno",
+      colorHex: "#FADBD8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 54,
+      simbolo: "Xe",
+      nombre: "Xenón",
+      masaAtomica: 131.29,
+      grupo: 18,
+      periodo: 5,
+      categoria: "Gas noble",
+      colorHex: "#F9E79F",
+    ),
+
+    // ---------------------------------------------------------------------------
+    // PERIODO 6 (primera parte)
+    // ---------------------------------------------------------------------------
+    ElementoQuimico(
+      numeroAtomico: 55,
+      simbolo: "Cs",
+      nombre: "Cesio",
+      masaAtomica: 132.91,
+      grupo: 1,
+      periodo: 6,
+      categoria: "Metal alcalino",
+      colorHex: "#AED6F1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 56,
+      simbolo: "Ba",
+      nombre: "Bario",
+      masaAtomica: 137.33,
+      grupo: 2,
+      periodo: 6,
+      categoria: "Metal alcalinotérreo",
+      colorHex: "#A9CCE3",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 57,
+      simbolo: "La",
+      nombre: "Lantano",
+      masaAtomica: 138.91,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 58,
+      simbolo: "Ce",
+      nombre: "Cerio",
+      masaAtomica: 140.12,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 59,
+      simbolo: "Pr",
+      nombre: "Praseodimio",
+      masaAtomica: 140.91,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 60,
+      simbolo: "Nd",
+      nombre: "Neodimio",
+      masaAtomica: 144.24,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 61,
+      simbolo: "Pm",
+      nombre: "Prometio",
+      masaAtomica: 145,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 62,
+      simbolo: "Sm",
+      nombre: "Samario",
+      masaAtomica: 150.36,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 63,
+      simbolo: "Eu",
+      nombre: "Europio",
+      masaAtomica: 151.96,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 64,
+      simbolo: "Gd",
+      nombre: "Gadolinio",
+      masaAtomica: 157.25,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 65,
+      simbolo: "Tb",
+      nombre: "Terbio",
+      masaAtomica: 158.93,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 66,
+      simbolo: "Dy",
+      nombre: "Disprosio",
+      masaAtomica: 162.50,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 67,
+      simbolo: "Ho",
+      nombre: "Holmio",
+      masaAtomica: 164.93,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 68,
+      simbolo: "Er",
+      nombre: "Erbio",
+      masaAtomica: 167.26,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 69,
+      simbolo: "Tm",
+      nombre: "Tulio",
+      masaAtomica: 168.93,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 70,
+      simbolo: "Yb",
+      nombre: "Iterbio",
+      masaAtomica: 173.05,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 71,
+      simbolo: "Lu",
+      nombre: "Lutecio",
+      masaAtomica: 174.97,
+      grupo: 3,
+      periodo: 6,
+      categoria: "Lantánido",
+      colorHex: "#D2B4DE",
+    ),
+
+    // ---------------------------------------------------------------------------
+    // PERIODO 6 (segunda parte)
+    // ---------------------------------------------------------------------------
+    ElementoQuimico(
+      numeroAtomico: 72,
+      simbolo: "Hf",
+      nombre: "Hafnio",
+      masaAtomica: 178.49,
+      grupo: 4,
+      periodo: 6,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 73,
+      simbolo: "Ta",
+      nombre: "Tántalo",
+      masaAtomica: 180.95,
+      grupo: 5,
+      periodo: 6,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 74,
+      simbolo: "W",
+      nombre: "Wolframio",
+      masaAtomica: 183.84,
+      grupo: 6,
+      periodo: 6,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 75,
+      simbolo: "Re",
+      nombre: "Renio",
+      masaAtomica: 186.21,
+      grupo: 7,
+      periodo: 6,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    // ---------------------------------------------------------------------------
+    // BLOQUE 4 — Elementos 76 al 100
+    // ---------------------------------------------------------------------------
+    ElementoQuimico(
+      numeroAtomico: 76,
+      simbolo: "Os",
+      nombre: "Osmio",
+      masaAtomica: 190.23,
+      grupo: 8,
+      periodo: 6,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 77,
+      simbolo: "Ir",
+      nombre: "Iridio",
+      masaAtomica: 192.22,
+      grupo: 9,
+      periodo: 6,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 78,
+      simbolo: "Pt",
+      nombre: "Platino",
+      masaAtomica: 195.08,
+      grupo: 10,
+      periodo: 6,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 79,
+      simbolo: "Au",
+      nombre: "Oro",
+      masaAtomica: 196.97,
+      grupo: 11,
+      periodo: 6,
+      categoria: "Metal de transición",
+      colorHex: "#D4AC0D",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 80,
+      simbolo: "Hg",
+      nombre: "Mercurio",
+      masaAtomica: 200.59,
+      grupo: 12,
+      periodo: 6,
+      categoria: "Metal de transición",
+      colorHex: "#85C1E9",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 81,
+      simbolo: "Tl",
+      nombre: "Talio",
+      masaAtomica: 204.38,
+      grupo: 13,
+      periodo: 6,
+      categoria: "Metal",
+      colorHex: "#D6EAF8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 82,
+      simbolo: "Pb",
+      nombre: "Plomo",
+      masaAtomica: 207.2,
+      grupo: 14,
+      periodo: 6,
+      categoria: "Metal",
+      colorHex: "#BFC9CA",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 83,
+      simbolo: "Bi",
+      nombre: "Bismuto",
+      masaAtomica: 208.98,
+      grupo: 15,
+      periodo: 6,
+      categoria: "Metal",
+      colorHex: "#D7BDE2",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 84,
+      simbolo: "Po",
+      nombre: "Polonio",
+      masaAtomica: 209,
+      grupo: 16,
+      periodo: 6,
+      categoria: "Metaloide",
+      colorHex: "#F5B7B1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 85,
+      simbolo: "At",
+      nombre: "Ástato",
+      masaAtomica: 210,
+      grupo: 17,
+      periodo: 6,
+      categoria: "Halógeno",
+      colorHex: "#FADBD8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 86,
+      simbolo: "Rn",
+      nombre: "Radón",
+      masaAtomica: 222,
+      grupo: 18,
+      periodo: 6,
+      categoria: "Gas noble",
+      colorHex: "#F9E79F",
+    ),
+
+    // ---------------------------------------------------------------------------
+    // PERIODO 7 — ACTÍNIDOS + TRANSICIÓN PESADA
+    // ---------------------------------------------------------------------------
+    ElementoQuimico(
+      numeroAtomico: 87,
+      simbolo: "Fr",
+      nombre: "Francio",
+      masaAtomica: 223,
+      grupo: 1,
+      periodo: 7,
+      categoria: "Metal alcalino",
+      colorHex: "#AED6F1",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 88,
+      simbolo: "Ra",
+      nombre: "Radio",
+      masaAtomica: 226,
+      grupo: 2,
+      periodo: 7,
+      categoria: "Metal alcalinotérreo",
+      colorHex: "#A9CCE3",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 89,
+      simbolo: "Ac",
+      nombre: "Actinio",
+      masaAtomica: 227,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 90,
+      simbolo: "Th",
+      nombre: "Torio",
+      masaAtomica: 232.04,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 91,
+      simbolo: "Pa",
+      nombre: "Protactinio",
+      masaAtomica: 231.04,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 92,
+      simbolo: "U",
+      nombre: "Uranio",
+      masaAtomica: 238.03,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 93,
+      simbolo: "Np",
+      nombre: "Neptunio",
+      masaAtomica: 237,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 94,
+      simbolo: "Pu",
+      nombre: "Plutonio",
+      masaAtomica: 244,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 95,
+      simbolo: "Am",
+      nombre: "Americio",
+      masaAtomica: 243,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 96,
+      simbolo: "Cm",
+      nombre: "Curio",
+      masaAtomica: 247,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 97,
+      simbolo: "Bk",
+      nombre: "Berkelio",
+      masaAtomica: 247,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 98,
+      simbolo: "Cf",
+      nombre: "Californio",
+      masaAtomica: 251,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 99,
+      simbolo: "Es",
+      nombre: "Einstenio",
+      masaAtomica: 252,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 100,
+      simbolo: "Fm",
+      nombre: "Fermio",
+      masaAtomica: 257,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    // ---------------------------------------------------------------------------
+    // BLOQUE 5 — Elementos 101 al 118
+    // ---------------------------------------------------------------------------
+    ElementoQuimico(
+      numeroAtomico: 101,
+      simbolo: "Md",
+      nombre: "Mendelevio",
+      masaAtomica: 258,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 102,
+      simbolo: "No",
+      nombre: "Nobelio",
+      masaAtomica: 259,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 103,
+      simbolo: "Lr",
+      nombre: "Lawrencio",
+      masaAtomica: 266,
+      grupo: 3,
+      periodo: 7,
+      categoria: "Actínido",
+      colorHex: "#F1948A",
+    ),
+
+    // ---------------------------------------------------------------------------
+    // PERIODO 7 (Metales de transición final)
+    // ---------------------------------------------------------------------------
+    ElementoQuimico(
+      numeroAtomico: 104,
+      simbolo: "Rf",
+      nombre: "Rutherfordio",
+      masaAtomica: 267,
+      grupo: 4,
+      periodo: 7,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 105,
+      simbolo: "Db",
+      nombre: "Dubnio",
+      masaAtomica: 268,
+      grupo: 5,
+      periodo: 7,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 106,
+      simbolo: "Sg",
+      nombre: "Seaborgio",
+      masaAtomica: 269,
+      grupo: 6,
+      periodo: 7,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 107,
+      simbolo: "Bh",
+      nombre: "Bohrio",
+      masaAtomica: 270,
+      grupo: 7,
+      periodo: 7,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 108,
+      simbolo: "Hs",
+      nombre: "Hassio",
+      masaAtomica: 269,
+      grupo: 8,
+      periodo: 7,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 109,
+      simbolo: "Mt",
+      nombre: "Meitnerio",
+      masaAtomica: 278,
+      grupo: 9,
+      periodo: 7,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 110,
+      simbolo: "Ds",
+      nombre: "Darmstadtio",
+      masaAtomica: 281,
+      grupo: 10,
+      periodo: 7,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 111,
+      simbolo: "Rg",
+      nombre: "Roentgenio",
+      masaAtomica: 282,
+      grupo: 11,
+      periodo: 7,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 112,
+      simbolo: "Cn",
+      nombre: "Copernicio",
+      masaAtomica: 285,
+      grupo: 12,
+      periodo: 7,
+      categoria: "Metal de transición",
+      colorHex: "#D5DBDB",
+    ),
+
+    // ---------------------------------------------------------------------------
+    // POST-TRANSICIÓN PESADA
+    // ---------------------------------------------------------------------------
+    ElementoQuimico(
+      numeroAtomico: 113,
+      simbolo: "Nh",
+      nombre: "Nihonio",
+      masaAtomica: 286,
+      grupo: 13,
+      periodo: 7,
+      categoria: "Metal",
+      colorHex: "#D6EAF8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 114,
+      simbolo: "Fl",
+      nombre: "Flerovio",
+      masaAtomica: 289,
+      grupo: 14,
+      periodo: 7,
+      categoria: "Metal",
+      colorHex: "#D6EAF8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 115,
+      simbolo: "Mc",
+      nombre: "Moscovio",
+      masaAtomica: 290,
+      grupo: 15,
+      periodo: 7,
+      categoria: "Metal",
+      colorHex: "#D6EAF8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 116,
+      simbolo: "Lv",
+      nombre: "Livermorio",
+      masaAtomica: 293,
+      grupo: 16,
+      periodo: 7,
+      categoria: "Metal",
+      colorHex: "#D6EAF8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 117,
+      simbolo: "Ts",
+      nombre: "Tenesino",
+      masaAtomica: 294,
+      grupo: 17,
+      periodo: 7,
+      categoria: "Halógeno",
+      colorHex: "#FADBD8",
+    ),
+
+    ElementoQuimico(
+      numeroAtomico: 118,
+      simbolo: "Og",
+      nombre: "Oganesón",
+      masaAtomica: 294,
+      grupo: 18,
+      periodo: 7,
+      categoria: "Gas noble",
+      colorHex: "#F9E79F",
+    ),
+  ];
+}

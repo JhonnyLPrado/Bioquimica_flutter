@@ -1,0 +1,22 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    # Desactiva advertencias de funciones deprecadas como withOpacity
+    deprecated_member_use: ignore
+    deprecated_member_use_from_same_package: ignore
+
+    # Solo INFO, no warning
+    unnecessary_underscores: info
+
+  language:
+    strict-casts: false
+    strict-inference: false
+    strict-raw-types: false
+
+linter:
+  rules:
+    # Puedes agregar reglas aquí si quieres un estilo más estricto
+    prefer_const_constructors: true
+    prefer_final_locals: true
+    avoid_print: false
