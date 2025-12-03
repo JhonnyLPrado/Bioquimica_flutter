@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:movil/screens/calculadora_quimica/calculadora_quimica_screen.dart';
+import 'screens/reconocimiento_lewis_screen.dart';
 
 // Providers
 import 'providers/tabla_periodica_provider.dart';
@@ -91,6 +92,17 @@ class SidePeriodicDrawer extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (_) => const CalculadoraQuimicaScreen(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text("Reconocimiento Lewis"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => ReconocimientoLewisScreen(),
                   ),
                 );
               },

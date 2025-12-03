@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'boyle_screen.dart';
+import 'charles_screen.dart';
+import 'concentraciones_screen.dart';
+import 'dalton_screen.dart';
+import 'estequiometria_screen.dart';
+import 'gay_lussac_screen.dart';
+import 'gases_ideales_screen.dart';
 import 'masa_molar_screen.dart';
 import 'mol_gramos_screen.dart';
-import 'estequiometria_screen.dart';
-import 'concentraciones_screen.dart';
-import 'gases_ideales_screen.dart';
 
 class CalculadoraQuimicaScreen extends StatelessWidget {
   const CalculadoraQuimicaScreen({super.key});
@@ -28,6 +32,10 @@ class CalculadoraQuimicaScreen extends StatelessWidget {
           _item(context, "Estequiometría", const EstequiometriaScreen()),
           _item(context, "Concentraciones", const ConcentracionesScreen()),
           _item(context, "Ley de gases ideales", const GasesIdealesScreen()),
+          _item(context, "Ley de Boyle-Mariotte", const BoyleScreen()),
+          _item(context, "Ley de Dalton", const DaltonScreen()),
+          _item(context, "Ley de Gay-Lussac", const GayLussacScreen()),
+          _item(context, "Ley de Charles", const CharlesScreen()),
         ],
       ),
     );
