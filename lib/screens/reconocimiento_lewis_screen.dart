@@ -68,13 +68,7 @@ class _ReconocimientoLewisScreenState extends State<ReconocimientoLewisScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfff4ecff),
-      appBar: AppBar(
-        title: const Text("Reconocimiento Lewis"),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        foregroundColor: Colors.black,
-      ),
+      appBar: AppBar(title: const Text("Reconocimiento Lewis"), elevation: 0),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(

@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:movil/main.dart';
 import 'package:pocketbase/pocketbase.dart';
+import 'package:movil/screens/login/signin.dart';
 import '../../utils/auth_util.dart';
 
 final pb = PocketBase('http://127.0.0.1:8090');
@@ -58,6 +59,15 @@ class _LoginScreenState extends State<LoginScreen> {
                 }
               },
               child: const Text('Login'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const SignInScreen()),
+                );
+              },
+              child: const Text('Don\'t have an account? Sign Up'),
             ),
           ],
         ),
