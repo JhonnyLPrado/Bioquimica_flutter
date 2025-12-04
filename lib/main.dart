@@ -11,6 +11,13 @@ import 'providers/tabla_periodica_provider.dart';
 import 'screens/pantalla_tabla_periodica.dart';
 import 'screens/reconocimiento_lewis_screen.dart';
 
+// Util
+import 'utils/auth_util.dart';
+
+// The usual, pb
+
+final pb = PocketBase('http://127.0.0.1:8090');
+
 void main() {
   runApp(const BioquimicaApp());
 }
@@ -29,9 +36,20 @@ class BioquimicaApp extends StatelessWidget {
         title: 'Bioquímica — App de estudio',
         theme: ThemeData(
           useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.dark(
+            primary: Colors.blue,
+            secondary: Colors.green,
+            surface: Colors.grey[800]!,
+            background: Colors.grey[900]!,
+            error: Colors.red,
+            onPrimary: Colors.white,
+            onSecondary: Colors.white,
+            onSurface: Colors.white,
+            onBackground: Colors.white,
+            onError: Colors.white,
+          ),
         ),
-        home: const HomePage(),
+        home: pb.authStore.isValid ? const HomePage() : const LoginScreen(),
       ),
     );
   }
@@ -45,6 +63,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // Build, the usual.
   @override
   Widget build(BuildContext context) {
     return Scaffold(

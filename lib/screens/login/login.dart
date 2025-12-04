@@ -2,6 +2,7 @@
 // Simple login page.
 
 import 'package:flutter/material.dart';
+import 'package:movil/main.dart';
 import 'package:pocketbase/pocketbase.dart';
 import '../../utils/auth_util.dart';
 
@@ -46,7 +47,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         _emailController.text,
                         _passwordController.text,
                       );
-                  Navigator.pop(context);
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => const HomePage()),
+                  );
                 } catch (e) {
                   ScaffoldMessenger.of(
                     context,
