@@ -15,13 +15,8 @@ class CalculadoraQuimicaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF121212),
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: const Text(
-          "Calculadora Química",
-          style: TextStyle(color: Colors.white),
-        ),
+        title: const Text("Calculadora Química"),
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: ListView(
@@ -43,7 +38,6 @@ class CalculadoraQuimicaScreen extends StatelessWidget {
 
   Widget _item(BuildContext ctx, String text, Widget screen) {
     return Card(
-      color: Colors.white.withOpacity(0.05),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ListTile(
         title: Text(text, style: const TextStyle(color: Colors.white)),

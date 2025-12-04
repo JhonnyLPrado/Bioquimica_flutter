@@ -18,13 +18,11 @@ class _GasesIdealesScreenState extends State<GasesIdealesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF121212),
       appBar: AppBar(
         title: const Text(
           "Ley de Gases Ideales",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.black,
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Padding(

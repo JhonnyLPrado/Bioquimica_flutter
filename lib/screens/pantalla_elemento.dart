@@ -13,14 +13,9 @@ class PantallaElemento extends StatelessWidget {
     final colorCategoria = _getCategoriaColor(elemento.categoria);
 
     return Scaffold(
-      backgroundColor: const Color(0xFF121212),
       appBar: AppBar(
-        title: Text(
-          elemento.nombre,
-          style: const TextStyle(color: Colors.white),
-        ),
+        title: Text(elemento.nombre),
         backgroundColor: Colors.black,
-        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
@@ -52,10 +47,7 @@ class PantallaElemento extends StatelessWidget {
                   const SizedBox(height: 8),
 
                   // nombre
-                  Text(
-                    elemento.nombre,
-                    style: const TextStyle(color: Colors.white70, fontSize: 28),
-                  ),
+                  Text(elemento.nombre, style: const TextStyle(fontSize: 28)),
 
                   const SizedBox(height: 24),
 
@@ -63,7 +55,6 @@ class PantallaElemento extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.04),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
                         color: colorCategoria.withOpacity(0.70),
