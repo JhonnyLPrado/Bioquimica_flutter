@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:movil/screens/login/login.dart';
 import 'package:provider/provider.dart';
 import 'package:movil/screens/calculadora_quimica/calculadora_quimica_screen.dart';
-import 'screens/reconocimiento_lewis_screen.dart';
+import 'package:pocketbase/pocketbase.dart';
 
 // Providers
 import 'providers/tabla_periodica_provider.dart';
 
 // Screens
 import 'screens/pantalla_tabla_periodica.dart';
+import 'screens/reconocimiento_lewis_screen.dart';
 
 void main() {
   runApp(const BioquimicaApp());
@@ -118,6 +120,18 @@ class SidePeriodicDrawer extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (_) => const PantallaTablaPeriodica(),
                   ),
+                );
+              },
+            ),
+
+            ListTile(
+              leading: const Icon(Icons.verified_user_sharp),
+              title: const Text("Login Test"),
+              subtitle: const Text("Probar el login del usuario."),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const LoginScreen()),
                 );
               },
             ),
