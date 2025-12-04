@@ -10,13 +10,10 @@ import 'providers/tabla_periodica_provider.dart';
 // Screens
 import 'screens/pantalla_tabla_periodica.dart';
 import 'screens/reconocimiento_lewis_screen.dart';
+import 'screens/login/user_profile.dart';
 
 // Util
-import 'utils/auth_util.dart';
-
-// The usual, pb
-
-final pb = PocketBase('http://127.0.0.1:8090');
+import "package:movil/providers/auth_provider.dart";
 
 void main() {
   runApp(const BioquimicaApp());
@@ -30,26 +27,31 @@ class BioquimicaApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => TablaPeriodicaProvider()),
+        ChangeNotifierProvider(create: (_) => PocketBaseAuthNotifier()),
       ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Bioquímica — App de estudio',
-        theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: ColorScheme.dark(
-            primary: Colors.blue,
-            secondary: Colors.green,
-            surface: Colors.grey[800]!,
-            background: Colors.grey[900]!,
-            error: Colors.red,
-            onPrimary: Colors.white,
-            onSecondary: Colors.white,
-            onSurface: Colors.white,
-            onBackground: Colors.white,
-            onError: Colors.white,
-          ),
-        ),
-        home: pb.authStore.isValid ? const HomePage() : const LoginScreen(),
+      child: Consumer<PocketBaseAuthNotifier>(
+        builder: (context, auth, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Bioquímica — App de estudio',
+            theme: ThemeData(
+              useMaterial3: true,
+              colorScheme: ColorScheme.dark(
+                primary: Colors.blue,
+                secondary: Colors.green,
+                surface: Colors.grey[800]!,
+                background: Colors.grey[900]!,
+                error: Colors.red,
+                onPrimary: Colors.white,
+                onSecondary: Colors.white,
+                onSurface: Colors.white,
+                onBackground: Colors.white,
+                onError: Colors.white,
+              ),
+            ),
+            home: auth.isAuthenticated ? const HomePage() : const LoginScreen(),
+          );
+        },
       ),
     );
   }
@@ -144,13 +146,13 @@ class SidePeriodicDrawer extends StatelessWidget {
             ),
 
             ListTile(
-              leading: const Icon(Icons.verified_user_sharp),
-              title: const Text("Login Test"),
-              subtitle: const Text("Probar el login del usuario."),
+              leading: const Icon(Icons.person),
+              title: const Text("User Profile"),
+              subtitle: const Text("View your profile"),
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const LoginScreen()),
+                  MaterialPageRoute(builder: (_) => const UserProfileScreen()),
                 );
               },
             ),

@@ -3,11 +3,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:movil/main.dart';
-import 'package:pocketbase/pocketbase.dart';
 import 'package:movil/screens/login/signin.dart';
-import '../../utils/auth_util.dart';
-
-final pb = PocketBase('http://127.0.0.1:8090');
+import 'package:provider/provider.dart';
+import 'package:movil/providers/auth_provider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -42,16 +40,20 @@ class _LoginScreenState extends State<LoginScreen> {
             ElevatedButton(
               onPressed: () async {
                 try {
-                  await pb
-                      .collection('users')
-                      .authWithPassword(
-                        _emailController.text,
-                        _passwordController.text,
-                      );
-                  Navigator.pushReplacement(
+                  final authService = Provider.of<PocketBaseAuthNotifier>(
                     context,
-                    MaterialPageRoute(builder: (_) => const HomePage()),
+                    listen: false,
                   );
+                  await authService.login(
+                    _emailController.text,
+                    _passwordController.text,
+                  );
+                  if (mounted) {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (_) => const HomePage()),
+                    );
+                  }
                 } catch (e) {
                   ScaffoldMessenger.of(
                     context,

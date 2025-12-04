@@ -1,12 +1,15 @@
 // This is ALWAYS pushed, it's safe to pop.
 import 'package:flutter/material.dart';
 import 'package:movil/main.dart';
-import 'package:pocketbase/pocketbase.dart';
-import '../../utils/auth_util.dart';
+import 'package:provider/provider.dart';
+import 'package:movil/providers/auth_provider.dart';
 
+/*
 final pb = PocketBase(
   'http://127.0.0.1:8090',
 ); // I wonder if I should refactor so there is only one of these passed as an argument.
+Guess what. Idiot.
+*/
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -46,28 +49,22 @@ class _SignInScreenState extends State<SignInScreen> {
             ElevatedButton(
               onPressed: () async {
                 try {
-                  final body = <String, dynamic>{
-                    "email": _emailController.text,
-                    "password": _passwordController.text,
-                    "passwordConfirm": _passwordConfirmationController.text,
-                  };
-
-                  final record = await pb
-                      .collection('users')
-                      .create(body: body);
-
-                  // Log in the user immediately after successful registration
-                  await pb
-                      .collection('users')
-                      .authWithPassword(
-                        _emailController.text,
-                        _passwordController.text,
-                      );
-
-                  Navigator.pushReplacement(
+                  final authService = Provider.of<PocketBaseAuthNotifier>(
                     context,
-                    MaterialPageRoute(builder: (_) => const HomePage()),
+                    listen: false,
                   );
+                  await authService.signUp(
+                    _emailController.text,
+                    _passwordController.text,
+                    _passwordConfirmationController.text,
+                  );
+                  if (mounted) {
+                    // Good idea to send the new user directly to homepage here.
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (_) => const HomePage()),
+                    );
+                  }
                 } catch (e) {
                   ScaffoldMessenger.of(
                     context,
