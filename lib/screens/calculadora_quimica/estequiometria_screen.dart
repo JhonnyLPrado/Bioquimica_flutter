@@ -17,13 +17,11 @@ class _EstequiometriaScreenState extends State<EstequiometriaScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF121212),
       appBar: AppBar(
         title: const Text(
           "Estequiometría",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.black,
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Padding(

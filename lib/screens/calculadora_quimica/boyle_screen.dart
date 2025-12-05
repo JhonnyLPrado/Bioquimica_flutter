@@ -18,9 +18,7 @@ class _BoyleScreenState extends State<BoyleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF121212),
       appBar: AppBar(
-        backgroundColor: Colors.black,
         iconTheme: const IconThemeData(color: Colors.white),
         title: const Text(
           "Ley de Boyle-Mariotte",

@@ -4,6 +4,10 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
+import 'package:pocketbase/pocketbase.dart';
+import 'package:provider/provider.dart'; // Import provider to access auth state
+import '../../main.dart'; // Import main.dart to access the global pb instance
+import '../../providers/auth_provider.dart'; // Import auth_provider to get user ID
 
 class ReconocimientoLewisScreen extends StatefulWidget {
   const ReconocimientoLewisScreen({super.key});
@@ -58,6 +62,50 @@ class _ReconocimientoLewisScreenState extends State<ReconocimientoLewisScreen> {
         prediccion = data["clase"]?.toString() ?? "—";
         confianza = data["confianza"]?.toString() ?? "—";
       });
+
+      // Save to PocketBase as a new post
+      final authProvider = Provider.of<PocketBaseAuthNotifier>(
+        context,
+        listen: false,
+      );
+      final userId = authProvider
+          .currentUser
+          ?.id; // Corrected to use the ID of the user record
+
+      if (userId != null && imagenBytes != null) {
+        try {
+          final RecordModel post = await pb
+              .collection('posts')
+              .create(
+                body: {
+                  'title': 'Lewis Structure Prediction',
+                  'content':
+                      'Predicted: ${prediccion ?? '—'} with confidence: ${confianza ?? '—'}',
+                  'user': userId,
+                  'prediction': prediccion ?? '—',
+                  'result':
+                      prediccion ??
+                      '—', // For now, result is same as prediction
+                },
+                files: [
+                  http.MultipartFile.fromBytes(
+                    'image', // Field name for the image in PocketBase
+                    imagenBytes!,
+                    filename:
+                        'lewis_structure_${DateTime.now().millisecondsSinceEpoch}.png',
+                  ),
+                ],
+              );
+          print('Post created in PocketBase: ${post.id}');
+        } on ClientException catch (e) {
+          print('PocketBase error creating post: ${e.response}');
+          // Optionally, display an error to the user
+          // ScaffoldMessenger.of(context).showSnackBar(
+          //   SnackBar(content: Text('Failed to save post: ${e.response['message']}\')),\n          // );
+        } catch (e) {
+          print('Unknown error creating post: $e');
+        }
+      }
     } else {
       setState(() {
         prediccion = "Error del servidor";
@@ -68,13 +116,7 @@ class _ReconocimientoLewisScreenState extends State<ReconocimientoLewisScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfff4ecff),
-      appBar: AppBar(
-        title: const Text("Reconocimiento Lewis"),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        foregroundColor: Colors.black,
-      ),
+      appBar: AppBar(title: const Text("Reconocimiento Lewis"), elevation: 0),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(

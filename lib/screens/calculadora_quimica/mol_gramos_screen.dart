@@ -18,13 +18,11 @@ class _MolGramosScreenState extends State<MolGramosScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF121212),
       appBar: AppBar(
         title: const Text(
           "Mol ↔ Gramos",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.black,
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Padding(
