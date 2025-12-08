@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pocketbase/pocketbase.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:convert';
 
 class PocketBaseAuthNotifier extends ChangeNotifier {
   final _pb = PocketBase('http://127.0.0.1:8090');
@@ -11,8 +13,47 @@ class PocketBaseAuthNotifier extends ChangeNotifier {
 
   PocketBaseAuthNotifier() {
     _pb.authStore.onChange.listen((event) {
+      _saveAuth(); // Save auth state on every change
       notifyListeners(); // Notify widgets listening to this provider
     });
+    _loadAuth(); // Load saved auth on initialization
+  }
+
+  /// Load saved auth from SharedPreferences
+  Future<void> _loadAuth() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final token = prefs.getString('pb_auth_token');
+      final modelJson = prefs.getString('pb_auth_model');
+
+      if (token != null && modelJson != null) {
+        final model = RecordModel.fromJson(jsonDecode(modelJson));
+        _pb.authStore.save(token, model);
+        notifyListeners();
+      }
+    } catch (e) {
+      print('Error loading auth: $e');
+    }
+  }
+
+  /// Save current auth to SharedPreferences
+  Future<void> _saveAuth() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+
+      if (_pb.authStore.isValid) {
+        await prefs.setString('pb_auth_token', _pb.authStore.token);
+        await prefs.setString(
+          'pb_auth_model',
+          jsonEncode(_pb.authStore.model.toJson()),
+        );
+      } else {
+        await prefs.remove('pb_auth_token');
+        await prefs.remove('pb_auth_model');
+      }
+    } catch (e) {
+      print('Error saving auth: $e');
+    }
   }
 
   Future<void> login(String email, String password) async {
@@ -50,7 +91,11 @@ class PocketBaseAuthNotifier extends ChangeNotifier {
     logout();
   }
 
-  void logout() {
+  Future<void> logout() async {
     _pb.authStore.clear();
+    // Clear from SharedPreferences
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('pb_auth_token');
+    await prefs.remove('pb_auth_model');
   }
 }

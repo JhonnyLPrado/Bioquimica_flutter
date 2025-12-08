@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
 import 'package:pocketbase/pocketbase.dart';
-import 'package:provider/provider.dart'; // Import provider to access auth state
-import '../../main.dart'; // Import main.dart to access the global pb instance
-import '../../providers/auth_provider.dart'; // Import auth_provider to get user ID
+import 'package:provider/provider.dart';
+import '../main.dart';
+import '../providers/auth_provider.dart';
 
 class ReconocimientoLewisScreen extends StatefulWidget {
   const ReconocimientoLewisScreen({super.key});
@@ -21,6 +21,7 @@ class _ReconocimientoLewisScreenState extends State<ReconocimientoLewisScreen> {
   Uint8List? imagenBytes;
   String? prediccion;
   String? confianza;
+  bool isLoading = false;
 
   final ImagePicker picker = ImagePicker();
 
@@ -39,157 +40,261 @@ class _ReconocimientoLewisScreenState extends State<ReconocimientoLewisScreen> {
 
   Future<void> enviarAnalisis() async {
     if (imagenBytes == null) {
-      setState(() {
-        prediccion = "No se seleccionó imagen";
-      });
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Por favor, selecciona una imagen primero'),
+        ),
+      );
       return;
     }
 
-    final String img64 = base64Encode(imagenBytes!);
+    setState(() {
+      isLoading = true;
+    });
 
-    final url = Uri.parse("http://127.0.0.1:8000/predict/base64");
+    try {
+      final String img64 = base64Encode(imagenBytes!);
+      final url = Uri.parse("http://127.0.0.1:8000/predict/base64");
 
-    final response = await http.post(
-      url,
-      headers: {"Content-Type": "application/json"},
-      body: jsonEncode({"imagen": img64}),
-    );
-
-    if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
-
-      setState(() {
-        prediccion = data["clase"]?.toString() ?? "—";
-        confianza = data["confianza"]?.toString() ?? "—";
-      });
-
-      // Save to PocketBase as a new post
-      final authProvider = Provider.of<PocketBaseAuthNotifier>(
-        context,
-        listen: false,
+      final response = await http.post(
+        url,
+        headers: {"Content-Type": "application/json"},
+        body: jsonEncode({"imagen": img64}),
       );
-      final userId = authProvider
-          .currentUser
-          ?.id; // Corrected to use the ID of the user record
 
-      if (userId != null && imagenBytes != null) {
-        try {
-          final RecordModel post = await pb
-              .collection('posts')
-              .create(
-                body: {
-                  'title': 'Lewis Structure Prediction',
-                  'content':
-                      'Predicted: ${prediccion ?? '—'} with confidence: ${confianza ?? '—'}',
-                  'user': userId,
-                  'prediction': prediccion ?? '—',
-                  'result':
-                      prediccion ??
-                      '—', // For now, result is same as prediction
-                },
-                files: [
-                  http.MultipartFile.fromBytes(
-                    'image', // Field name for the image in PocketBase
-                    imagenBytes!,
-                    filename:
-                        'lewis_structure_${DateTime.now().millisecondsSinceEpoch}.png',
-                  ),
-                ],
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
+
+        setState(() {
+          prediccion = data["clase"]?.toString() ?? "—";
+          confianza = data["confianza"]?.toString() ?? "—";
+        });
+
+        // Save to PocketBase as a new post
+        final authProvider = Provider.of<PocketBaseAuthNotifier>(
+          context,
+          listen: false,
+        );
+        final userId = authProvider.currentUser?.id;
+
+        if (userId != null && imagenBytes != null) {
+          try {
+            final RecordModel post = await pb
+                .collection('posts')
+                .create(
+                  body: {
+                    'title': 'Lewis Structure Prediction',
+                    'content':
+                        'Predicted: ${prediccion ?? '—'} with confidence: ${confianza ?? '—'}',
+                    'user': userId,
+                    'prediction': prediccion ?? '—',
+                    'result': prediccion ?? '—',
+                  },
+                  files: [
+                    http.MultipartFile.fromBytes(
+                      'image',
+                      imagenBytes!,
+                      filename:
+                          'lewis_structure_${DateTime.now().millisecondsSinceEpoch}.png',
+                    ),
+                  ],
+                );
+            print('Post created in PocketBase: ${post.id}');
+
+            if (mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Análisis guardado exitosamente')),
               );
-          print('Post created in PocketBase: ${post.id}');
-        } on ClientException catch (e) {
-          print('PocketBase error creating post: ${e.response}');
-          // Optionally, display an error to the user
-          // ScaffoldMessenger.of(context).showSnackBar(
-          //   SnackBar(content: Text('Failed to save post: ${e.response['message']}\')),\n          // );
-        } catch (e) {
-          print('Unknown error creating post: $e');
+            }
+          } on ClientException catch (e) {
+            print('PocketBase error creating post: ${e.response}');
+            if (mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text('Error al guardar: ${e.response}')),
+              );
+            }
+          } catch (e) {
+            print('Unknown error creating post: $e');
+          }
         }
+      } else {
+        setState(() {
+          prediccion = "Error del servidor";
+        });
       }
-    } else {
+    } catch (e) {
+      print('Error during analysis: $e');
       setState(() {
-        prediccion = "Error del servidor";
+        prediccion = "Error de conexión";
+      });
+    } finally {
+      setState(() {
+        isLoading = false;
       });
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
     return Scaffold(
       appBar: AppBar(title: const Text("Reconocimiento Lewis"), elevation: 0),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(16),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              width: double.infinity,
-              height: 300,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
+            // Image preview card
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: Container(
+                height: 300,
+                decoration: BoxDecoration(color: colorScheme.surface),
+                child: imagenBytes == null
+                    ? Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.image_outlined,
+                              size: 64,
+                              color: colorScheme.onSurface.withOpacity(0.5),
+                            ),
+                            const SizedBox(height: 16),
+                            Text(
+                              "No hay imagen seleccionada",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: colorScheme.onSurface.withOpacity(0.7),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    : Image.memory(imagenBytes!, fit: BoxFit.contain),
               ),
-              child: imagenBytes == null
-                  ? const Center(
-                      child: Text(
-                        "No hay imagen seleccionada",
-                        style: TextStyle(fontSize: 16),
-                      ),
-                    )
-                  : ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Image.memory(imagenBytes!, fit: BoxFit.contain),
+            ),
+
+            const SizedBox(height: 24),
+
+            // Action buttons
+            Row(
+              children: [
+                Expanded(
+                  child: FilledButton.tonalIcon(
+                    onPressed: isLoading ? null : seleccionarImagen,
+                    icon: const Icon(Icons.photo_library),
+                    label: const Text("Seleccionar imagen"),
+                    style: FilledButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(vertical: 16),
                     ),
-            ),
-            const SizedBox(height: 20),
-
-            // Seleccionar imagen
-            ElevatedButton(
-              onPressed: seleccionarImagen,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.purple,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 30,
-                  vertical: 12,
+                  ),
                 ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: FilledButton.icon(
+                    onPressed: isLoading ? null : enviarAnalisis,
+                    icon: isLoading
+                        ? SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              color: colorScheme.onPrimary,
+                            ),
+                          )
+                        : const Icon(Icons.send),
+                    label: Text(isLoading ? "Analizando..." : "Analizar"),
+                    style: FilledButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 32),
+
+            // Results section
+            if (prediccion != null) ...[
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.science,
+                            color: colorScheme.primary,
+                            size: 28,
+                          ),
+                          const SizedBox(width: 12),
+                          Text(
+                            "Resultados del Análisis",
+                            style: Theme.of(context).textTheme.titleLarge
+                                ?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: colorScheme.primary,
+                                ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      _buildResultRow(
+                        context,
+                        "Predicción",
+                        prediccion ?? "—",
+                        Icons.check_circle_outline,
+                      ),
+                      const SizedBox(height: 12),
+                      _buildResultRow(
+                        context,
+                        "Confianza",
+                        confianza ?? "—",
+                        Icons.percent,
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              child: const Text("Seleccionar imagen"),
-            ),
-
-            const SizedBox(height: 10),
-
-            // Enviar análisis
-            ElevatedButton(
-              onPressed: enviarAnalisis,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.purple,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 30,
-                  vertical: 12,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-              child: const Text("Enviar para análisis"),
-            ),
-
-            const SizedBox(height: 30),
-
-            // Resultado
-            Text(
-              "Predicción: ${prediccion ?? '—'}  (${confianza ?? '—'})",
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,
-            ),
+            ],
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildResultRow(
+    BuildContext context,
+    String label,
+    String value,
+    IconData icon,
+  ) {
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return Row(
+      children: [
+        Icon(icon, color: colorScheme.secondary, size: 20),
+        const SizedBox(width: 12),
+        Text(
+          "$label: ",
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+            color: colorScheme.onSurface.withOpacity(0.7),
+          ),
+        ),
+        Expanded(
+          child: Text(
+            value,
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              fontWeight: FontWeight.bold,
+              color: colorScheme.onSurface,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

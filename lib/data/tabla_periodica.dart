@@ -10,7 +10,7 @@ class TablaPeriodicaData {
       grupo: 1,
       periodo: 1,
       categoria: "No metal",
-      colorHex: "#A3E4D7",
+      colorHex: "#4DB6AC",
     ),
     ElementoQuimico(
       numeroAtomico: 2,
@@ -20,7 +20,7 @@ class TablaPeriodicaData {
       grupo: 18,
       periodo: 1,
       categoria: "Gas noble",
-      colorHex: "#F9E79F",
+      colorHex: "#FFB74D",
     ),
 
     ElementoQuimico(
@@ -31,7 +31,7 @@ class TablaPeriodicaData {
       grupo: 1,
       periodo: 2,
       categoria: "Metal alcalino",
-      colorHex: "#AED6F1",
+      colorHex: "#81D4FA",
     ),
     ElementoQuimico(
       numeroAtomico: 4,
@@ -41,7 +41,7 @@ class TablaPeriodicaData {
       grupo: 2,
       periodo: 2,
       categoria: "Metal alcalinotérreo",
-      colorHex: "#A9CCE3",
+      colorHex: "#64B5F6",
     ),
     ElementoQuimico(
       numeroAtomico: 5,
@@ -51,7 +51,7 @@ class TablaPeriodicaData {
       grupo: 13,
       periodo: 2,
       categoria: "Metaloide",
-      colorHex: "#F5B7B1",
+      colorHex: "#9575CD",
     ),
     ElementoQuimico(
       numeroAtomico: 6,
@@ -61,7 +61,7 @@ class TablaPeriodicaData {
       grupo: 14,
       periodo: 2,
       categoria: "No metal",
-      colorHex: "#D7DBDD",
+      colorHex: "#4DB6AC",
     ),
     ElementoQuimico(
       numeroAtomico: 7,
@@ -71,7 +71,7 @@ class TablaPeriodicaData {
       grupo: 15,
       periodo: 2,
       categoria: "No metal",
-      colorHex: "#A9DFBF",
+      colorHex: "#4DB6AC",
     ),
     ElementoQuimico(
       numeroAtomico: 8,
@@ -81,7 +81,7 @@ class TablaPeriodicaData {
       grupo: 16,
       periodo: 2,
       categoria: "No metal",
-      colorHex: "#AED6F1",
+      colorHex: "#4DB6AC",
     ),
     ElementoQuimico(
       numeroAtomico: 9,
@@ -91,7 +91,7 @@ class TablaPeriodicaData {
       grupo: 17,
       periodo: 2,
       categoria: "Halógeno",
-      colorHex: "#FADBD8",
+      colorHex: "#F06292",
     ),
     ElementoQuimico(
       numeroAtomico: 10,
@@ -101,7 +101,7 @@ class TablaPeriodicaData {
       grupo: 18,
       periodo: 2,
       categoria: "Gas noble",
-      colorHex: "#F9E79F",
+      colorHex: "#FFB74D",
     ),
 
     ElementoQuimico(
@@ -112,7 +112,7 @@ class TablaPeriodicaData {
       grupo: 1,
       periodo: 3,
       categoria: "Metal alcalino",
-      colorHex: "#AED6F1",
+      colorHex: "#81D4FA",
     ),
     ElementoQuimico(
       numeroAtomico: 12,
@@ -122,7 +122,7 @@ class TablaPeriodicaData {
       grupo: 2,
       periodo: 3,
       categoria: "Metal alcalinotérreo",
-      colorHex: "#A9CCE3",
+      colorHex: "#64B5F6",
     ),
     ElementoQuimico(
       numeroAtomico: 13,
@@ -132,7 +132,7 @@ class TablaPeriodicaData {
       grupo: 13,
       periodo: 3,
       categoria: "Metal",
-      colorHex: "#D6EAF8",
+      colorHex: "#4FC3F7",
     ),
     ElementoQuimico(
       numeroAtomico: 14,
@@ -142,7 +142,7 @@ class TablaPeriodicaData {
       grupo: 14,
       periodo: 3,
       categoria: "Metaloide",
-      colorHex: "#F5B7B1",
+      colorHex: "#9575CD",
     ),
     ElementoQuimico(
       numeroAtomico: 15,
@@ -152,7 +152,7 @@ class TablaPeriodicaData {
       grupo: 15,
       periodo: 3,
       categoria: "No metal",
-      colorHex: "#A9DFBF",
+      colorHex: "#4DB6AC",
     ),
     ElementoQuimico(
       numeroAtomico: 16,
@@ -162,7 +162,7 @@ class TablaPeriodicaData {
       grupo: 16,
       periodo: 3,
       categoria: "No metal",
-      colorHex: "#F7DC6F",
+      colorHex: "#4DB6AC",
     ),
     ElementoQuimico(
       numeroAtomico: 17,
@@ -172,7 +172,7 @@ class TablaPeriodicaData {
       grupo: 17,
       periodo: 3,
       categoria: "Halógeno",
-      colorHex: "#FADBD8",
+      colorHex: "#F06292",
     ),
     ElementoQuimico(
       numeroAtomico: 18,
@@ -182,7 +182,7 @@ class TablaPeriodicaData {
       grupo: 18,
       periodo: 3,
       categoria: "Gas noble",
-      colorHex: "#F9E79F",
+      colorHex: "#FFB74D",
     ),
 
     ElementoQuimico(
@@ -193,7 +193,7 @@ class TablaPeriodicaData {
       grupo: 1,
       periodo: 4,
       categoria: "Metal alcalino",
-      colorHex: "#AED6F1",
+      colorHex: "#81D4FA",
     ),
     ElementoQuimico(
       numeroAtomico: 20,
@@ -203,7 +203,7 @@ class TablaPeriodicaData {
       grupo: 2,
       periodo: 4,
       categoria: "Metal alcalinotérreo",
-      colorHex: "#A9CCE3",
+      colorHex: "#64B5F6",
     ),
     ElementoQuimico(
       numeroAtomico: 21,
@@ -213,7 +213,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 4,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 22,
@@ -223,7 +223,7 @@ class TablaPeriodicaData {
       grupo: 4,
       periodo: 4,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 23,
@@ -233,7 +233,7 @@ class TablaPeriodicaData {
       grupo: 5,
       periodo: 4,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 24,
@@ -243,7 +243,7 @@ class TablaPeriodicaData {
       grupo: 6,
       periodo: 4,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 25,
@@ -253,7 +253,7 @@ class TablaPeriodicaData {
       grupo: 7,
       periodo: 4,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 26,
@@ -263,7 +263,7 @@ class TablaPeriodicaData {
       grupo: 8,
       periodo: 4,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 27,
@@ -273,7 +273,7 @@ class TablaPeriodicaData {
       grupo: 9,
       periodo: 4,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 28,
@@ -283,7 +283,7 @@ class TablaPeriodicaData {
       grupo: 10,
       periodo: 4,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 29,
@@ -293,7 +293,7 @@ class TablaPeriodicaData {
       grupo: 11,
       periodo: 4,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 30,
@@ -303,7 +303,7 @@ class TablaPeriodicaData {
       grupo: 12,
       periodo: 4,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 31,
@@ -313,7 +313,7 @@ class TablaPeriodicaData {
       grupo: 13,
       periodo: 4,
       categoria: "Metal",
-      colorHex: "#D6EAF8",
+      colorHex: "#4FC3F7",
     ),
     ElementoQuimico(
       numeroAtomico: 32,
@@ -323,7 +323,7 @@ class TablaPeriodicaData {
       grupo: 14,
       periodo: 4,
       categoria: "Metaloide",
-      colorHex: "#F5B7B1",
+      colorHex: "#9575CD",
     ),
     ElementoQuimico(
       numeroAtomico: 33,
@@ -333,7 +333,7 @@ class TablaPeriodicaData {
       grupo: 15,
       periodo: 4,
       categoria: "Metaloide",
-      colorHex: "#F5B7B1",
+      colorHex: "#9575CD",
     ),
     ElementoQuimico(
       numeroAtomico: 34,
@@ -343,7 +343,7 @@ class TablaPeriodicaData {
       grupo: 16,
       periodo: 4,
       categoria: "No metal",
-      colorHex: "#A9DFBF",
+      colorHex: "#4DB6AC",
     ),
     ElementoQuimico(
       numeroAtomico: 35,
@@ -353,7 +353,7 @@ class TablaPeriodicaData {
       grupo: 17,
       periodo: 4,
       categoria: "Halógeno",
-      colorHex: "#FADBD8",
+      colorHex: "#F06292",
     ),
     ElementoQuimico(
       numeroAtomico: 36,
@@ -363,7 +363,7 @@ class TablaPeriodicaData {
       grupo: 18,
       periodo: 4,
       categoria: "Gas noble",
-      colorHex: "#F9E79F",
+      colorHex: "#FFB74D",
     ),
 
     ElementoQuimico(
@@ -374,7 +374,7 @@ class TablaPeriodicaData {
       grupo: 1,
       periodo: 5,
       categoria: "Metal alcalino",
-      colorHex: "#AED6F1",
+      colorHex: "#81D4FA",
     ),
     ElementoQuimico(
       numeroAtomico: 38,
@@ -384,7 +384,7 @@ class TablaPeriodicaData {
       grupo: 2,
       periodo: 5,
       categoria: "Metal alcalinotérreo",
-      colorHex: "#A9CCE3",
+      colorHex: "#64B5F6",
     ),
     ElementoQuimico(
       numeroAtomico: 39,
@@ -394,7 +394,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 5,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 40,
@@ -404,7 +404,7 @@ class TablaPeriodicaData {
       grupo: 4,
       periodo: 5,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 41,
@@ -414,7 +414,7 @@ class TablaPeriodicaData {
       grupo: 5,
       periodo: 5,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 42,
@@ -424,7 +424,7 @@ class TablaPeriodicaData {
       grupo: 6,
       periodo: 5,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 43,
@@ -434,7 +434,7 @@ class TablaPeriodicaData {
       grupo: 7,
       periodo: 5,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 44,
@@ -444,7 +444,7 @@ class TablaPeriodicaData {
       grupo: 8,
       periodo: 5,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 45,
@@ -454,7 +454,7 @@ class TablaPeriodicaData {
       grupo: 9,
       periodo: 5,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 46,
@@ -464,7 +464,7 @@ class TablaPeriodicaData {
       grupo: 10,
       periodo: 5,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 47,
@@ -474,7 +474,7 @@ class TablaPeriodicaData {
       grupo: 11,
       periodo: 5,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 48,
@@ -484,7 +484,7 @@ class TablaPeriodicaData {
       grupo: 12,
       periodo: 5,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 49,
@@ -494,7 +494,7 @@ class TablaPeriodicaData {
       grupo: 13,
       periodo: 5,
       categoria: "Metal",
-      colorHex: "#D6EAF8",
+      colorHex: "#4FC3F7",
     ),
     ElementoQuimico(
       numeroAtomico: 50,
@@ -504,7 +504,7 @@ class TablaPeriodicaData {
       grupo: 13,
       periodo: 5,
       categoria: "Metal",
-      colorHex: "#D6EAF8",
+      colorHex: "#4FC3F7",
     ),
     ElementoQuimico(
       numeroAtomico: 51,
@@ -514,7 +514,7 @@ class TablaPeriodicaData {
       grupo: 15,
       periodo: 5,
       categoria: "Metaloide",
-      colorHex: "#F5B7B1",
+      colorHex: "#9575CD",
     ),
     ElementoQuimico(
       numeroAtomico: 52,
@@ -524,7 +524,7 @@ class TablaPeriodicaData {
       grupo: 16,
       periodo: 5,
       categoria: "Metaloide",
-      colorHex: "#F5B7B1",
+      colorHex: "#9575CD",
     ),
     ElementoQuimico(
       numeroAtomico: 53,
@@ -534,7 +534,7 @@ class TablaPeriodicaData {
       grupo: 17,
       periodo: 5,
       categoria: "Halógeno",
-      colorHex: "#FADBD8",
+      colorHex: "#F06292",
     ),
     ElementoQuimico(
       numeroAtomico: 54,
@@ -544,7 +544,7 @@ class TablaPeriodicaData {
       grupo: 18,
       periodo: 5,
       categoria: "Gas noble",
-      colorHex: "#F9E79F",
+      colorHex: "#FFB74D",
     ),
 
     ElementoQuimico(
@@ -555,7 +555,7 @@ class TablaPeriodicaData {
       grupo: 1,
       periodo: 6,
       categoria: "Metal alcalino",
-      colorHex: "#AED6F1",
+      colorHex: "#81D4FA",
     ),
     ElementoQuimico(
       numeroAtomico: 56,
@@ -565,7 +565,7 @@ class TablaPeriodicaData {
       grupo: 2,
       periodo: 6,
       categoria: "Metal alcalinotérreo",
-      colorHex: "#A9CCE3",
+      colorHex: "#64B5F6",
     ),
 
     // Lantánidos
@@ -577,7 +577,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 58,
@@ -587,7 +587,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 59,
@@ -597,7 +597,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 60,
@@ -607,7 +607,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 61,
@@ -617,7 +617,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 62,
@@ -627,7 +627,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 63,
@@ -637,7 +637,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 64,
@@ -647,7 +647,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 65,
@@ -657,7 +657,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 66,
@@ -667,7 +667,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 67,
@@ -677,7 +677,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 68,
@@ -687,7 +687,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 69,
@@ -697,7 +697,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 70,
@@ -707,7 +707,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
     ElementoQuimico(
       numeroAtomico: 71,
@@ -717,7 +717,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 6,
       categoria: "Lantánido",
-      colorHex: "#D2B4DE",
+      colorHex: "#7986CB",
     ),
 
     ElementoQuimico(
@@ -728,7 +728,7 @@ class TablaPeriodicaData {
       grupo: 4,
       periodo: 6,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 73,
@@ -738,7 +738,7 @@ class TablaPeriodicaData {
       grupo: 5,
       periodo: 6,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 74,
@@ -748,7 +748,7 @@ class TablaPeriodicaData {
       grupo: 6,
       periodo: 6,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 75,
@@ -758,7 +758,7 @@ class TablaPeriodicaData {
       grupo: 7,
       periodo: 6,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 76,
@@ -768,7 +768,7 @@ class TablaPeriodicaData {
       grupo: 8,
       periodo: 6,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 77,
@@ -778,7 +778,7 @@ class TablaPeriodicaData {
       grupo: 9,
       periodo: 6,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 78,
@@ -788,7 +788,7 @@ class TablaPeriodicaData {
       grupo: 10,
       periodo: 6,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 79,
@@ -798,7 +798,7 @@ class TablaPeriodicaData {
       grupo: 11,
       periodo: 6,
       categoria: "Metal de transición",
-      colorHex: "#F7DC6F",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 80,
@@ -808,7 +808,7 @@ class TablaPeriodicaData {
       grupo: 12,
       periodo: 6,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 81,
@@ -818,7 +818,7 @@ class TablaPeriodicaData {
       grupo: 13,
       periodo: 6,
       categoria: "Metal",
-      colorHex: "#D6EAF8",
+      colorHex: "#4FC3F7",
     ),
     ElementoQuimico(
       numeroAtomico: 82,
@@ -828,7 +828,7 @@ class TablaPeriodicaData {
       grupo: 14,
       periodo: 6,
       categoria: "Metal",
-      colorHex: "#D6EAF8",
+      colorHex: "#4FC3F7",
     ),
     ElementoQuimico(
       numeroAtomico: 83,
@@ -838,7 +838,7 @@ class TablaPeriodicaData {
       grupo: 15,
       periodo: 6,
       categoria: "Metal",
-      colorHex: "#D6EAF8",
+      colorHex: "#4FC3F7",
     ),
     ElementoQuimico(
       numeroAtomico: 84,
@@ -848,7 +848,7 @@ class TablaPeriodicaData {
       grupo: 16,
       periodo: 6,
       categoria: "Metaloide",
-      colorHex: "#F5B7B1",
+      colorHex: "#9575CD",
     ),
     ElementoQuimico(
       numeroAtomico: 85,
@@ -858,7 +858,7 @@ class TablaPeriodicaData {
       grupo: 17,
       periodo: 6,
       categoria: "Halógeno",
-      colorHex: "#FADBD8",
+      colorHex: "#F06292",
     ),
     ElementoQuimico(
       numeroAtomico: 86,
@@ -868,7 +868,7 @@ class TablaPeriodicaData {
       grupo: 18,
       periodo: 6,
       categoria: "Gas noble",
-      colorHex: "#F9E79F",
+      colorHex: "#FFB74D",
     ),
 
     ElementoQuimico(
@@ -879,7 +879,7 @@ class TablaPeriodicaData {
       grupo: 1,
       periodo: 7,
       categoria: "Metal alcalino",
-      colorHex: "#AED6F1",
+      colorHex: "#81D4FA",
     ),
     ElementoQuimico(
       numeroAtomico: 88,
@@ -889,7 +889,7 @@ class TablaPeriodicaData {
       grupo: 2,
       periodo: 7,
       categoria: "Metal alcalinotérreo",
-      colorHex: "#A9CCE3",
+      colorHex: "#64B5F6",
     ),
 
     // Actínidos
@@ -901,7 +901,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 90,
@@ -911,7 +911,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 91,
@@ -921,7 +921,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 92,
@@ -931,7 +931,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 93,
@@ -941,7 +941,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 94,
@@ -951,7 +951,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 95,
@@ -961,7 +961,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 96,
@@ -971,7 +971,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 97,
@@ -981,7 +981,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 98,
@@ -991,7 +991,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 99,
@@ -1001,7 +1001,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 100,
@@ -1011,7 +1011,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 101,
@@ -1021,7 +1021,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 102,
@@ -1031,7 +1031,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
     ElementoQuimico(
       numeroAtomico: 103,
@@ -1041,7 +1041,7 @@ class TablaPeriodicaData {
       grupo: 3,
       periodo: 7,
       categoria: "Actínido",
-      colorHex: "#D7BDE2",
+      colorHex: "#E57373",
     ),
 
     ElementoQuimico(
@@ -1052,7 +1052,7 @@ class TablaPeriodicaData {
       grupo: 4,
       periodo: 7,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 105,
@@ -1062,7 +1062,7 @@ class TablaPeriodicaData {
       grupo: 5,
       periodo: 7,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 106,
@@ -1072,7 +1072,7 @@ class TablaPeriodicaData {
       grupo: 6,
       periodo: 7,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 107,
@@ -1082,7 +1082,7 @@ class TablaPeriodicaData {
       grupo: 7,
       periodo: 7,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 108,
@@ -1092,7 +1092,7 @@ class TablaPeriodicaData {
       grupo: 8,
       periodo: 7,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 109,
@@ -1102,7 +1102,7 @@ class TablaPeriodicaData {
       grupo: 9,
       periodo: 7,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 110,
@@ -1112,7 +1112,7 @@ class TablaPeriodicaData {
       grupo: 10,
       periodo: 7,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 111,
@@ -1122,7 +1122,7 @@ class TablaPeriodicaData {
       grupo: 11,
       periodo: 7,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 112,
@@ -1132,7 +1132,7 @@ class TablaPeriodicaData {
       grupo: 12,
       periodo: 7,
       categoria: "Metal de transición",
-      colorHex: "#D6DBDF",
+      colorHex: "#4DD0E1",
     ),
     ElementoQuimico(
       numeroAtomico: 113,
@@ -1142,7 +1142,7 @@ class TablaPeriodicaData {
       grupo: 13,
       periodo: 7,
       categoria: "Metal",
-      colorHex: "#D6EAF8",
+      colorHex: "#4FC3F7",
     ),
     ElementoQuimico(
       numeroAtomico: 114,
@@ -1152,7 +1152,7 @@ class TablaPeriodicaData {
       grupo: 14,
       periodo: 7,
       categoria: "Metal",
-      colorHex: "#D6EAF8",
+      colorHex: "#4FC3F7",
     ),
     ElementoQuimico(
       numeroAtomico: 115,
@@ -1162,7 +1162,7 @@ class TablaPeriodicaData {
       grupo: 15,
       periodo: 7,
       categoria: "Metal",
-      colorHex: "#D6EAF8",
+      colorHex: "#4FC3F7",
     ),
     ElementoQuimico(
       numeroAtomico: 116,
@@ -1172,7 +1172,7 @@ class TablaPeriodicaData {
       grupo: 16,
       periodo: 7,
       categoria: "Metal",
-      colorHex: "#D6EAF8",
+      colorHex: "#4FC3F7",
     ),
     ElementoQuimico(
       numeroAtomico: 117,
@@ -1182,7 +1182,7 @@ class TablaPeriodicaData {
       grupo: 17,
       periodo: 7,
       categoria: "Halógeno",
-      colorHex: "#FADBD8",
+      colorHex: "#F06292",
     ),
     ElementoQuimico(
       numeroAtomico: 118,
@@ -1192,7 +1192,7 @@ class TablaPeriodicaData {
       grupo: 18,
       periodo: 7,
       categoria: "Gas noble",
-      colorHex: "#F9E79F",
+      colorHex: "#FFB74D",
     ),
   ];
 }
