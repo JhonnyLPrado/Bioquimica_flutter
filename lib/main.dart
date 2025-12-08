@@ -151,7 +151,7 @@ class BioquimicaApp extends StatelessWidget {
                 ),
               ),
               // Card Theme
-              cardTheme: CardTheme(
+              cardTheme: CardThemeData(
                 elevation: 2,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -220,7 +220,7 @@ class BioquimicaApp extends StatelessWidget {
                 ),
               ),
               // Dialog Theme
-              dialogTheme: DialogTheme(
+              dialogTheme: DialogThemeData(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(16),
                 ),
